@@ -1,0 +1,148 @@
+$main_color: rgb(242, 192, 192);
+$hover_color: rgb(241, 162, 162);
+$gray_color: #B6B6B6;
+
+html,body{
+    background:	rgb(230, 230, 230);
+    padding:20px;
+}
+
+.App{
+    background:#fff;
+    padding:30px 30px;
+    font-size:14px;
+    box-shadow:0px 10px 20px #999;
+    text-align:left;
+}
+
+h1{
+    color:$main_color;
+    font-size:60px;
+}
+
+input[type=text]{
+    padding:5px 10px;
+    outline: none;
+    font-size:20px;
+}
+
+button{
+    color:#444;
+    background: transparent;
+    outline: none;
+    
+
+    transition: background .2s, color .2s;
+    -moz-transition: background .2s, color .2s;
+    -webkit-transition: background .2s, color .2s;
+    -o-transition: background .2s, color .2s;
+
+}
+
+.add{
+    background: $main_color;
+    padding: 6px 15px;
+    border: 1px solid gray;
+    font-size:20px;
+    
+    &:hover{
+        background: $hover_color;
+        color:#fff;
+    }
+}
+
+.stateFilter{
+    font-size: 14px;
+    margin: 0 5px;
+    margin-top:10px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    
+    &:hover{
+        border-color: $gray_color;
+    }
+}
+
+.act{
+    border-color: $gray_color;
+}
+
+ul{
+    padding-left:0;
+
+    li{
+        border: 1px solid $gray_color;
+        list-style: none;
+        text-align: left;
+        font-size: 20px;
+
+        margin: -1px 0px;
+        padding: 10px;
+        position: relative;
+    }
+
+    .done{
+        label{
+            color:$gray_color;
+            text-decoration: line-through;
+        }
+    }
+
+    input[type=checkbox] {
+        position: relative;
+        visibility: hidden;
+        width: 26px;
+        height: 17px;
+
+        &:after {
+            border: 1px solid black;
+            border-radius: 3px;
+            color: #fff;
+            content: "";
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            position: absolute;
+            text-align: center;
+            visibility: visible;
+            width: 20px;
+        }
+
+        &:checked:after {
+            border: 1px solid $gray_color;
+            color: $gray_color;
+            content: "✓";
+        }
+    }
+
+    label{
+        font-weight: normal;
+        margin-bottom: 0;
+    }
+
+    .del{
+        background: transparent;
+        border:none;
+
+        margin-top:3px;
+        padding: 0 10px;
+        position: absolute;
+        right: 0px;
+
+        font-size:26px;
+        line-height: 26px;
+        
+        &:hover{
+            color:$gray_color;
+        }
+    }
+
+    .on{
+        display: inline-block;
+    }
+
+    .leave{
+        display: none;
+    }
+    
+}
